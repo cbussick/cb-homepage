@@ -6,17 +6,16 @@ function HeaderMenuItem({
   icon: Icon,
   label,
   href,
+  className,
 }: {
   icon: LucideIcon;
   label: string;
   href: string;
+  className?: string;
 }) {
   return (
-    <NavigationMenuItem>
-      <Link
-        href={href}
-        className="flex gap-2 group/header-menu-item transition-colors duration-300"
-      >
+    <NavigationMenuItem className={className}>
+      <Link href={href} className="flex gap-2 group/header-menu-item">
         <Icon className="group-hover/header-menu-item:text-primary transition-colors duration-300" />
         <span className="relative">
           <span className="transition-opacity duration-300 group-hover/header-menu-item:opacity-0">
