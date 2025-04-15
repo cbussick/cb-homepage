@@ -21,7 +21,7 @@ const pictureSize = 400;
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center p-4">
+    <div className="flex flex-col items-center px-4 pt-4 pb-20">
       <div className="flex flex-col gap-10 max-w-5xl">
         <NavigationMenu>
           <NavigationMenuList className="flex gap-10">
@@ -29,8 +29,8 @@ export default function Home() {
             <HeaderMenuItem icon={Hammer} label="Projects" href="#projects" />
             <HeaderMenuItem
               icon={MessageCircleMore}
-              label="Contact me"
-              href="#"
+              label="Reach out"
+              href="#reach-out"
             />
             <NavigationMenuItem className="flex items-center">
               <TooltipProvider>
@@ -53,7 +53,7 @@ export default function Home() {
             <h1>
               <CBTextGradient>Hey</CBTextGradient> 👋🏻
             </h1>
-            <p>{`I'm Christopher. I like to do software development in whatever form - be it for the web, VR or something else. Besides that, I like doing sports, music production, reading manga and watching anime.`}</p>
+            <p>{`I'm Christopher. I like to do software development in whatever form — be it for the web, virtual reality or something else. Besides that, I like doing sports, music production, reading manga and watching anime.`}</p>
             <figure className="flex flex-col gap-1">
               <Image
                 src="/me_and_bruno_1x1.png"
@@ -77,8 +77,7 @@ export default function Home() {
               description={
                 <div className="flex flex-col">
                   <p>
-                    {`The Protégé-Chat is a way for students to learn about a
-                  topic, using the "learning by teaching" method. The student takes on the role of the "teacher" and  has a conversation with a Large Language Model (LLM), which takes on the role of the "student".
+                    {`The Protégé-Chat is a way for students to learn using the "learning by teaching" method. The student takes on the role of the "teacher" and  has a conversation with a Large Language Model (LLM), which takes on the role of the "student".
                   Using this method, students can reinforce their knowledge and
                   identify knowledge gaps.`}
                     <br />
@@ -88,7 +87,7 @@ export default function Home() {
                     <li>The student explains a topic to the LLM.</li>
                     <li>
                       The LLM explains a topic to the student and the student
-                      evaluates the explaination.
+                      evaluates the explanation.
                     </li>
                   </ol>
                   <p>
@@ -180,6 +179,18 @@ export default function Home() {
               }
               href="https://www.youtube.com/watch?v=3zIW1LwYYDQ"
             />
+          </div>
+          <div className="flex flex-col gap-4 items-center" id="reach-out">
+            <CBTextGradient as="h1">Reach out</CBTextGradient>
+            <p>
+              If you would like to get in touch with me, feel free to reach out
+              via email:
+            </p>
+            <address>
+              <a href="mailto:webmaster@example.com">
+                bussick.christopher@gmail.com
+              </a>
+            </address>
           </div>
         </div>
       </div>
