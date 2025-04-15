@@ -1,95 +1,63 @@
+import { CBTextGradient } from "@/components/ui/CBTextGradient";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+
+const pictureSize = 400;
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="flex flex-col gap-4 p-4">
+      <NavigationMenu className="flex gap-2">
+        <CBTextGradient>Christopher Bussick</CBTextGradient>
+        <NavigationMenuList>
+          <NavigationMenuItem className="flex items-center">
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <Link href="https://github.com/cbussick" target="_blank">
+                    <Image
+                      src="/github.svg"
+                      alt="GitHub"
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Me on GitHub</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+      <div className="flex justify-center">
+        <div className="flex flex-col gap-4 items-center max-w-2xl">
+          <h1>Hey 👋🏻</h1>
+          <p>{`I'm Christopher. I like to do software development in whatever form - be it for the web, using LLMs, VR or something else. Besides that, I like doing sports, music production, reading manga and watching anime.`}</p>
+          <figure className="flex flex-col gap-1">
             <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/me_and_bruno_1x1.png"
+              alt="Me and Bruno"
+              width={pictureSize}
+              height={pictureSize}
+              priority
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+            <figcaption>{`Me and Bruno :)`}</figcaption>
+          </figure>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
