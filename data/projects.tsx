@@ -65,7 +65,7 @@ export const projects: Project[] = [
     techStack: "Unreal Engine, Blueprints, Meta Quest 2",
     imageSrc: "/vr-office-exercises-farm.png",
     imageAlt: "A screenshot of VR Office Exercises",
-    href: "https://www.youtube.com/watch?v=2Qd1E6v8W4I",
+    href: "https://www.youtube.com/watch?v=L4YNOIWra-A",
     description: (
       <p>
         Physical inactivity is a major cause of mortality worldwide. But
