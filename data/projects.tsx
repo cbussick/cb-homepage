@@ -25,7 +25,7 @@ export const projects: Project[] = [
           </li>
         </ol>
         <p>
-          {`I developed it as part of my
+          {`I developed the Protégé-Chat as part of my
         master's thesis
         at the `}
           <Link
@@ -101,10 +101,10 @@ export const projects: Project[] = [
           className="text-primary"
         >
           WH
-        </Link>{" "}
-        as part of our respective curricula. It features a rhythm-based game
-        mode with multiple difficulties, progress recording and character
-        customization.
+        </Link>
+        {` as part of our bachelor's degree. It features a rhythm-based game mode
+        with multiple difficulties, progress recording and character
+        customization.`}
       </p>
     ),
   },
