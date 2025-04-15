@@ -48,7 +48,7 @@ export const projects: Project[] = [
     href: "https://www.dinas-lab.app/",
     description: (
       <p>
-        {`DiNAs Lab is a website where students can learn biology. It features multiple different exercise types and aims to gamify the learning process. DiNAs Lab was developed by our group of 5 students of the `}
+        {`DiNAs Lab is a website where students can learn biology. It features multiple different exercise types and aims to gamify the learning process. DiNAs Lab was developed by our group of 5 students at the `}
         <Link
           href="https://www.en.w-hs.de/"
           target="_blank"
