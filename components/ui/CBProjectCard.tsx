@@ -30,7 +30,7 @@ function ProjectCard({
       <Separator />
       <CardContent className="flex flex-col gap-4 items-center">
         <Image src={imageSrc} alt={imageAlt} width={700} height={1} />
-        <p>{description}</p>
+        {description}
       </CardContent>
       <CardFooter>
         <Link
