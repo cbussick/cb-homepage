@@ -44,7 +44,9 @@ export default function Home() {
       </NavigationMenu>
       <div className="flex justify-center">
         <div className="flex flex-col gap-4 items-center max-w-2xl">
-          <h1>Hey 👋🏻</h1>
+          <h1>
+            <CBTextGradient>Hey</CBTextGradient> 👋🏻
+          </h1>
           <p>{`I'm Christopher. I like to do software development in whatever form - be it for the web, using LLMs, VR or something else. Besides that, I like doing sports, music production, reading manga and watching anime.`}</p>
           <figure className="flex flex-col gap-1">
             <Image

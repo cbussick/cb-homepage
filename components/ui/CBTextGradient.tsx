@@ -1,10 +1,18 @@
 import { JSX, ReactNode } from "react";
 
-function CBTextGradient({ children }: { children: ReactNode }): JSX.Element {
+interface CBTextGradientProps {
+  children: ReactNode;
+  as?: keyof JSX.IntrinsicElements;
+}
+
+function CBTextGradient({
+  children,
+  as: Component = "span",
+}: CBTextGradientProps): JSX.Element {
   return (
-    <p className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-semibold">
+    <Component className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent font-semibold">
       {children}
-    </p>
+    </Component>
   );
 }
 
