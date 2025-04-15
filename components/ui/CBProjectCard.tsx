@@ -6,6 +6,15 @@ import { Card, CardContent, CardFooter, CardHeader } from "./card";
 import { CBTextGradient } from "./CBTextGradient";
 import { Separator } from "./separator";
 
+export interface Project {
+  title: string;
+  techStack: string;
+  imageSrc: string;
+  imageAlt: string;
+  description: ReactNode;
+  href: string;
+}
+
 function ProjectCard({
   title,
   techStack,
@@ -13,18 +22,13 @@ function ProjectCard({
   imageAlt,
   description,
   href,
-}: {
-  title: string;
-  techStack: string;
-  imageSrc: string;
-  imageAlt: string;
-  description: ReactNode;
-  href: string;
-}) {
+}: Project) {
   return (
-    <Card className="w-full">
+    <Card>
       <CardHeader>
-        <CBTextGradient as="h2">{title}</CBTextGradient>
+        <CBTextGradient as="h2" className="w-fit">
+          {title}
+        </CBTextGradient>
         <p>Tech Stack: {techStack}</p>
       </CardHeader>
       <Separator />
