@@ -45,11 +45,11 @@
 :root {
   --radius: 0.5rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.56 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.141 0.005 285.823);
+  --card-foreground: oklch(0.56 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.141 0.005 285.823);
+  --popover-foreground: oklch(0.56 0 0);
   --primary: oklch(0.84 0.172159 84.9338);
   --primary-foreground: oklch(0.98 0.016 73.684);
   --secondary: oklch(0.74 0.1839 53.5);
@@ -68,7 +68,7 @@
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-foreground: oklch(0.56 0 0);
   --sidebar-primary: oklch(0.84 0.172159 84.9338);
   --sidebar-primary-foreground: oklch(0.98 0.016 73.684);
   --sidebar-accent: oklch(0.74 0.1839 53.5);
@@ -120,7 +120,7 @@
   }
 
   h1 {
-    @apply scroll-m-20 pb-2 text-4xl font-extrabold tracking-tight lg:text-5xl;
+    @apply scroll-m-20 pb-2 text-4xl tracking-tight lg:text-5xl text-foreground;
   }
   h2 {
     @apply scroll-m-20 pb-2 text-3xl font-semibold tracking-tight;
@@ -142,6 +142,9 @@
   }
   blockquote {
     @apply border-l-2 pl-6 italic;
+  }
+  ol {
+    @apply list-decimal list-inside pl-4 py-2;
   }
   tr {
     @apply m-0 border-t p-0 even:bg-muted;
