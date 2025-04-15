@@ -1,4 +1,4 @@
-import { CBGitHubIcon } from "@/components/ui/CBGitHubIcon";
+import { GitHubIcon } from "@/components/ui/CBGitHubIcon";
 import { HeaderMenuItem } from "@/components/ui/CBHeaderMenuItem";
 import { ProjectCard } from "@/components/ui/CBProjectCard";
 import { CBTextGradient } from "@/components/ui/CBTextGradient";
@@ -37,7 +37,7 @@ export default function Home() {
                 <Tooltip>
                   <TooltipTrigger>
                     <Link href="https://github.com/cbussick" target="_blank">
-                      <CBGitHubIcon className="text-foreground hover:text-primary transition-colors duration-300" />
+                      <GitHubIcon className="text-foreground hover:text-primary transition-colors duration-300" />
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent>

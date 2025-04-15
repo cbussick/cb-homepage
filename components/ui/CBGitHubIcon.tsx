@@ -4,7 +4,7 @@ interface CBGithubIconProps {
   className?: string;
 }
 
-export function CBGitHubIcon({ className }: CBGithubIconProps) {
+export function GitHubIcon({ className }: CBGithubIconProps) {
   return (
     <svg
       role="img"
