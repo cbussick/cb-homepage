@@ -15,7 +15,7 @@ const buttonVariants = cva(
           "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
           // The bg needs to be a gradient by default to allow for a proper transition of the hover effect.
-          "border bg-gradient-to-r from-background to-background shadow-xs hover:bg-gradient-to-r hover:from-primary hover:to-secondary transition-colors duration-300 hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "border bg-gradient-to-r from-background to-background shadow-xs hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white transition-colors duration-300  dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
         secondary:
           "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
         ghost:
