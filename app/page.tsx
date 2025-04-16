@@ -19,7 +19,7 @@ export default function Home() {
         <h1>
           <CBTextGradient>Hey</CBTextGradient> 👋🏻
         </h1>
-        <p>{`I'm Christopher. I like to do software development in whatever form — for the web, virtual reality or something else. Besides that, I like doing sports, music production, reading manga and watching anime.`}</p>
+        <p>{`I'm Christopher. I like to do software development in whatever form — for the web, virtual reality or something else. Besides that, I like doing sports, making music, reading manga and watching anime.`}</p>
         <figure className="flex flex-col gap-1">
           <Image
             src="/me_and_bruno_1x1.png"
