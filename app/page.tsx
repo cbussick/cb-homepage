@@ -45,6 +45,7 @@ export default function Home() {
                   imageSrc={project.imageSrc}
                   imageAlt={project.imageAlt}
                   href={project.href}
+                  gitHubURL={project.gitHubURL}
                   description={project.description}
                 />
               </CarouselItem>

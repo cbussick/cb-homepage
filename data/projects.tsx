@@ -8,6 +8,7 @@ export const projects: Project[] = [
     imageSrc: "/protege-chat-teaching.png",
     imageAlt: "A screenshot of Protégé-Chat",
     href: "https://www.dinas-lab.app/",
+    gitHubURL: "https://github.com/cbussick/cb-masterthesis",
     description: (
       <div className="flex flex-col">
         <p>
@@ -35,7 +36,8 @@ export const projects: Project[] = [
           >
             WH
           </Link>
-          .
+          . It was built on top of the e-learning website DiNAs Lab which I
+          co-developed.
         </p>
       </div>
     ),
@@ -46,6 +48,7 @@ export const projects: Project[] = [
     imageSrc: "/stammbaumanalyse.png",
     imageAlt: "A screenshot of DiNAs Lab",
     href: "https://www.dinas-lab.app/",
+    gitHubURL: "https://github.com/cbussick/cb-masterthesis",
     description: (
       <p>
         {`DiNAs Lab is a website where students can learn biology. It features multiple different exercise types and aims to gamify the learning process. DiNAs Lab was developed by our group of 5 students at the `}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import { buttonVariants } from "./button";
 import { Card, CardContent, CardFooter, CardHeader } from "./card";
+import { GitHubIcon } from "./CBGitHubIcon";
 import { CBTextGradient } from "./CBTextGradient";
 import { Separator } from "./separator";
 
@@ -13,6 +14,7 @@ export interface Project {
   imageAlt: string;
   description: ReactNode;
   href: string;
+  gitHubURL?: string;
 }
 
 function ProjectCard({
@@ -22,6 +24,7 @@ function ProjectCard({
   imageAlt,
   description,
   href,
+  gitHubURL,
 }: Project) {
   return (
     <Card>
@@ -36,7 +39,7 @@ function ProjectCard({
         <Image src={imageSrc} alt={imageAlt} width={700} height={1} />
         {description}
       </CardContent>
-      <CardFooter>
+      <CardFooter className="flex gap-2 items-center">
         <Link
           href={href}
           target="_blank"
@@ -44,6 +47,11 @@ function ProjectCard({
         >
           Take me to the project
         </Link>
+        {gitHubURL && (
+          <Link href={gitHubURL} target="_blank">
+            <GitHubIcon className="text-foreground hover:text-primary transition-colors duration-300" />
+          </Link>
+        )}
       </CardFooter>
     </Card>
   );
