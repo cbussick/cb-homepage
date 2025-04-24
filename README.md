@@ -1,8 +1,10 @@
-# My homepage
+# My homepage 🚀
+
+This is my personal homepage :) I use this to give some information about myself and try out new technologies from time to time.
 
 ## Getting Started
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
