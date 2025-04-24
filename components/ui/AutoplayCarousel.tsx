@@ -1,7 +1,7 @@
 "use client";
 
 import Autoplay from "embla-carousel-autoplay";
-import { JSX } from "react";
+import { JSX, useRef } from "react";
 import { Carousel } from "./carousel";
 
 function AutoplayCarousel({
@@ -9,16 +9,19 @@ function AutoplayCarousel({
 }: {
   children: React.ReactNode;
 }): JSX.Element {
+  const autoplayRef = useRef(Autoplay({ delay: 2000 }));
+
+  const onScroll = () => {
+    autoplayRef.current?.stop();
+  };
+
   return (
     <Carousel
-      plugins={[
-        Autoplay({
-          delay: 6000,
-        }),
-      ]}
+      plugins={[autoplayRef.current]}
       opts={{
         loop: true,
       }}
+      onScroll={onScroll}
     >
       {children}
     </Carousel>

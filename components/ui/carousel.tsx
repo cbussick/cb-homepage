@@ -49,8 +49,9 @@ function Carousel({
   plugins,
   className,
   children,
+  onScroll,
   ...props
-}: React.ComponentProps<"div"> & CarouselProps) {
+}: React.ComponentProps<"div"> & CarouselProps & { onScroll?: () => void }) {
   const [carouselRef, api] = useEmblaCarousel(
     {
       ...opts,
@@ -68,12 +69,14 @@ function Carousel({
   }, []);
 
   const scrollPrev = React.useCallback(() => {
+    onScroll?.();
     api?.scrollPrev();
-  }, [api]);
+  }, [api, onScroll]);
 
   const scrollNext = React.useCallback(() => {
+    onScroll?.();
     api?.scrollNext();
-  }, [api]);
+  }, [api, onScroll]);
 
   const handleKeyDown = React.useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
