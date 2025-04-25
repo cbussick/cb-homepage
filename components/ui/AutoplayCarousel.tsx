@@ -9,7 +9,7 @@ function AutoplayCarousel({
 }: {
   children: React.ReactNode;
 }): JSX.Element {
-  const autoplayRef = useRef(Autoplay({ delay: 2000 }));
+  const autoplayRef = useRef(Autoplay({ delay: 6000 }));
 
   const onScroll = () => {
     autoplayRef.current?.stop();
