@@ -1,10 +1,10 @@
-# My homepage 🚀
+# My website 🚀
 
-This is my personal homepage :) I use this to give some information about myself and try out new technologies from time to time.
+This is my personal website.
+I use this webiste to present some information about myself. I also use it as a playground to try out new technologies from time to time.
+This iteration of my website was created with the intention of trying out [shadcn](https://ui.shadcn.com/).
 
 ## Getting Started
-
-Run the development server:
 
 ```bash
 npm run dev
