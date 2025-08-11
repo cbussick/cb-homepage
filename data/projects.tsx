@@ -7,7 +7,7 @@ export const projects: Project[] = [
     techStack: "OpenAI API, React, TypeScript, Next.js, Material UI",
     imageSrc: "/protege-chat-teaching.png",
     imageAlt: "A screenshot of Protégé-Chat",
-    href: "https://www.dinas-lab.app/",
+    href: "https://dinas-lab.vercel.app/",
     gitHubURL: "https://github.com/cbussick/cb-masterthesis",
     description: (
       <div className="flex flex-col">
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     techStack: "React, TypeScript, Next.js, Material UI, Firebase",
     imageSrc: "/stammbaumanalyse.png",
     imageAlt: "A screenshot of DiNAs Lab",
-    href: "https://www.dinas-lab.app/",
+    href: "https://dinas-lab.vercel.app/",
     gitHubURL: "https://github.com/cbussick/cb-masterthesis",
     description: (
       <p>
