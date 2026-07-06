@@ -1,10 +1,10 @@
-import styles from "./CBGitHubIcon.module.css";
+import styles from "./GitHubIcon.module.css";
 
-interface CBGithubIconProps {
+interface GitHubIconProps {
   className?: string;
 }
 
-export function GitHubIcon({ className }: CBGithubIconProps) {
+export function GitHubIcon({ className }: GitHubIconProps) {
   return (
     <svg
       role="img"

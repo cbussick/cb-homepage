@@ -1,7 +1,7 @@
 import { PanelLeftIcon } from "lucide-react";
 import { useEffect, useRef, type MouseEvent } from "react";
-import { GitHubIcon } from "@/components/shared/CBGitHubIcon";
-import { CBTextGradient } from "@/components/shared/CBTextGradient";
+import { GitHubIcon } from "@/components/shared/GitHubIcon";
+import { TextGradient } from "@/components/shared/TextGradient";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import type { NavItem } from "@/components/shared/navItem";
 import styles from "./MobileDrawer.module.css";
@@ -49,9 +49,9 @@ export function MobileDrawer({ items }: MobileDrawerProps) {
         className={styles.dialog}
         onClick={closeIfBackdropClick}
       >
-        <CBTextGradient className={styles.title}>
+        <TextGradient className={styles.title}>
           Christopher Bussick
-        </CBTextGradient>
+        </TextGradient>
         <ul className={styles.navList}>
           {items.map((item) => (
             <li key={item.title}>

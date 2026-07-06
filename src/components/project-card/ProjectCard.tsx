@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import { CBTextGradient } from "@/components/shared/CBTextGradient";
-import { GitHubIcon } from "@/components/shared/CBGitHubIcon";
+import { TextGradient } from "@/components/shared/TextGradient";
+import { GitHubIcon } from "@/components/shared/GitHubIcon";
 import styles from "./ProjectCard.module.css";
 
 export interface Project {
@@ -25,9 +25,9 @@ export function ProjectCard({
   return (
     <article className={styles.card}>
       <header className={styles.header}>
-        <CBTextGradient as="h2" className={styles.title}>
+        <TextGradient as="h2" className={styles.title}>
           {title}
-        </CBTextGradient>
+        </TextGradient>
         <p>Tech Stack: {techStack}</p>
       </header>
       <hr className={styles.separator} />

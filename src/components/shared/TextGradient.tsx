@@ -1,17 +1,17 @@
 import { JSX, ReactNode } from "react";
-import styles from "./CBTextGradient.module.css";
+import styles from "./TextGradient.module.css";
 
-interface CBTextGradientProps {
+interface TextGradientProps {
   children: ReactNode;
   as?: keyof JSX.IntrinsicElements;
   className?: string;
 }
 
-export function CBTextGradient({
+export function TextGradient({
   children,
   as: Component = "span",
   className,
-}: CBTextGradientProps): JSX.Element {
+}: TextGradientProps): JSX.Element {
   return (
     <Component
       className={[styles.gradient, className].filter(Boolean).join(" ")}

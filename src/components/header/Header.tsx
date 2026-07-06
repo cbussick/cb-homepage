@@ -1,6 +1,6 @@
 import { MobileDrawer } from "@/components/mobile-drawer/MobileDrawer";
-import { GitHubIcon } from "@/components/shared/CBGitHubIcon";
-import { CBTextGradient } from "@/components/shared/CBTextGradient";
+import { GitHubIcon } from "@/components/shared/GitHubIcon";
+import { TextGradient } from "@/components/shared/TextGradient";
 import type { NavItem } from "@/components/shared/navItem";
 import { Tooltip } from "@/components/shared/Tooltip";
 import { Hammer, MessageCircleMore } from "lucide-react";
@@ -18,7 +18,7 @@ export function Header() {
       <nav>
         <ul className={styles.navList}>
           <li>
-            <CBTextGradient>Christopher Bussick</CBTextGradient>
+            <TextGradient>Christopher Bussick</TextGradient>
           </li>
           {navItems.map((item) => (
             <li key={item.title} className={styles.desktopOnly}>
