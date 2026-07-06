@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     title: "Protégé-Chat",
     techStack: "OpenAI API, React, TypeScript, Next.js, Material UI",
-    imageSrc: "/protege-chat-teaching.png",
+    imageSrc: "/protege-chat-teaching.webp",
     imageAlt: "A screenshot of Protégé-Chat",
     href: "https://dinas-lab.vercel.app/",
     gitHubURL: "https://github.com/cbussick/cb-masterthesis",
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   {
     title: "DiNAs Lab",
     techStack: "React, TypeScript, Next.js, Material UI, Firebase",
-    imageSrc: "/stammbaumanalyse.png",
+    imageSrc: "/stammbaumanalyse.webp",
     imageAlt: "A screenshot of DiNAs Lab",
     href: "https://dinas-lab.vercel.app/",
     gitHubURL: "https://github.com/cbussick/cb-masterthesis",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
   {
     title: "VR Office Exercises",
     techStack: "Unreal Engine, Blueprints, Meta Quest 2",
-    imageSrc: "/vr-office-exercises-farm.png",
+    imageSrc: "/vr-office-exercises-farm.webp",
     imageAlt: "A screenshot of VR Office Exercises",
     href: "https://www.youtube.com/watch?v=L4YNOIWra-A",
     description: (

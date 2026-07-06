@@ -12,7 +12,7 @@ export function HeroSection() {
       </p>
       <figure className={styles.figure}>
         <img
-          src="/me_and_bruno_1x1.png"
+          src="/me_and_bruno_1x1.webp"
           alt="Me and Bruno"
           width={400}
           height={400}
