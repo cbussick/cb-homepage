@@ -1,0 +1,84 @@
+import { PanelLeftIcon } from "lucide-react";
+import { useEffect, useRef, type MouseEvent } from "react";
+import { GitHubIcon } from "@/components/shared/CBGitHubIcon";
+import { CBTextGradient } from "@/components/shared/CBTextGradient";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import type { NavItem } from "@/components/shared/navItem";
+import styles from "./MobileDrawer.module.css";
+
+interface MobileDrawerProps {
+  items: NavItem[];
+}
+
+export function MobileDrawer({ items }: MobileDrawerProps) {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const isMobile = useIsMobile();
+
+  useEffect(() => {
+    if (!isMobile) dialogRef.current?.close();
+  }, [isMobile]);
+
+  function closeDrawer() {
+    dialogRef.current?.close();
+  }
+
+  function closeIfBackdropClick(event: MouseEvent<HTMLDialogElement>) {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    const rect = dialog.getBoundingClientRect();
+    const clickedInsideDialog =
+      event.clientX >= rect.left &&
+      event.clientX <= rect.right &&
+      event.clientY >= rect.top &&
+      event.clientY <= rect.bottom;
+    if (!clickedInsideDialog) dialog.close();
+  }
+
+  return (
+    <>
+      <button
+        type="button"
+        className={styles.trigger}
+        aria-label="Toggle navigation menu"
+        onClick={() => dialogRef.current?.showModal()}
+      >
+        <PanelLeftIcon />
+      </button>
+      <dialog
+        ref={dialogRef}
+        className={styles.dialog}
+        onClick={closeIfBackdropClick}
+      >
+        <CBTextGradient className={styles.title}>
+          Christopher Bussick
+        </CBTextGradient>
+        <ul className={styles.navList}>
+          {items.map((item) => (
+            <li key={item.title}>
+              <a
+                href={item.href}
+                className={styles.navLink}
+                onClick={closeDrawer}
+              >
+                <item.icon className={styles.icon} />
+                <span>{item.title}</span>
+              </a>
+            </li>
+          ))}
+          <li>
+            <a
+              href="https://github.com/cbussick"
+              target="_blank"
+              rel="noopener"
+              className={styles.navLink}
+              onClick={closeDrawer}
+            >
+              <GitHubIcon className={styles.icon} />
+              <span>Me on GitHub</span>
+            </a>
+          </li>
+        </ul>
+      </dialog>
+    </>
+  );
+}

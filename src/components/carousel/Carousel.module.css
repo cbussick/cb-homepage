@@ -1,0 +1,77 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    padding-bottom: 3rem;
+  }
+}
+
+.viewport {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.prevButton:disabled,
+.nextButton:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.prevButton {
+  left: -3rem;
+}
+
+.nextButton {
+  right: -3rem;
+}
+
+@media (max-width: 768px) {
+  .prevButton,
+  .nextButton {
+    top: auto;
+    bottom: 0;
+    transform: none;
+  }
+
+  .prevButton {
+    left: calc(50% - 2.5rem);
+  }
+
+  .nextButton {
+    right: calc(50% - 2.5rem);
+  }
+}
