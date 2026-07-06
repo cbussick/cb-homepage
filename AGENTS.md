@@ -39,7 +39,7 @@ src/
     project-section/         # heading + Carousel + ProjectCards
     hero-section/            # intro/bio section
     reach-out-section/       # contact section
-    shared/                  # CBTextGradient, CBGitHubIcon, Tooltip
+    shared/                  # TextGradient, GitHubIcon, Tooltip
   data/projects.tsx          # project content (title, description, links)
   hooks/useIsMobile.ts       # matchMedia-based mobile breakpoint hook
 tests/                       # Playwright specs (smoke, nav, carousel)
