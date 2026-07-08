@@ -16,7 +16,7 @@ export function ProjectSection() {
           .join(" ")}
       >
         <h1>
-          Some <TextGradient>Projects</TextGradient> I Worked on
+          Things I&apos;ve <TextGradient>Built</TextGradient>
         </h1>
         <div className={styles.cards}>
           {projects.map((project, index) => (
