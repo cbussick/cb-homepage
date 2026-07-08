@@ -33,16 +33,45 @@
   padding: 1.5rem 1rem;
   background-color: var(--background);
   color: var(--foreground);
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  opacity: 0;
+  transition:
+    opacity 0.2s ease-out,
+    display 0.2s allow-discrete,
+    overlay 0.2s allow-discrete;
 }
 
 .dialog[open] {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  opacity: 1;
+
+  @starting-style {
+    opacity: 0;
+  }
 }
 
 .dialog::backdrop {
+  background-color: oklch(0% 0 0 / 0);
+  transition:
+    background-color 0.2s ease-out,
+    display 0.2s allow-discrete,
+    overlay 0.2s allow-discrete;
+}
+
+.dialog[open]::backdrop {
   background-color: var(--overlay-scrim);
+
+  @starting-style {
+    background-color: oklch(0% 0 0 / 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialog {
+    transition-duration: 0.1s;
+  }
 }
 
 .header {
