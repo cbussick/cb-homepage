@@ -70,7 +70,6 @@ export function MobileDrawer({ items }: MobileDrawerProps) {
                 className={styles.navLink}
                 onClick={closeDrawer}
               >
-                <item.icon className={styles.icon} />
                 <span>{item.title}</span>
               </a>
             </li>

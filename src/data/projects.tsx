@@ -3,7 +3,7 @@ import { Project } from "@/components/project-card/ProjectCard";
 export const projects: Project[] = [
   {
     title: "Protégé-Chat",
-    techStack: "OpenAI API, React, TypeScript, Next.js, Material UI",
+    techStack: ["OpenAI API", "React", "TypeScript", "Next.js", "Material UI"],
     imageSrc: "/protege-chat-teaching.webp",
     imageAlt: "A screenshot of Protégé-Chat",
     href: "https://dinas-lab.vercel.app/",
@@ -39,14 +39,14 @@ export const projects: Project[] = [
   },
   {
     title: "DiNAs Lab",
-    techStack: "React, TypeScript, Next.js, Material UI, Firebase",
+    techStack: ["React", "TypeScript", "Next.js", "Material UI", "Firebase"],
     imageSrc: "/stammbaumanalyse.webp",
     imageAlt: "A screenshot of DiNAs Lab",
     href: "https://dinas-lab.vercel.app/",
     gitHubURL: "https://github.com/cbussick/cb-masterthesis",
     description: (
       <p>
-        {`DiNAs Lab is a website where students can learn biology. It features multiple different exercise types and aims to gamify the learning process. DiNAs Lab was developed by our group of 5 students at the `}
+        {`DiNAs Lab is a learning platform where students can study biology. It features multiple different exercise types and aims to gamify the learning process. DiNAs Lab was developed by our group of 5 students at the `}
         <a href="https://www.en.w-hs.de/" target="_blank" rel="noopener">
           WH
         </a>
@@ -56,7 +56,7 @@ export const projects: Project[] = [
   },
   {
     title: "VR Office Exercises",
-    techStack: "Unreal Engine, Blueprints, Meta Quest 2",
+    techStack: ["Unreal Engine", "Blueprints", "Meta Quest 2"],
     imageSrc: "/vr-office-exercises-farm.webp",
     imageAlt: "A screenshot of VR Office Exercises",
     href: "https://www.youtube.com/watch?v=L4YNOIWra-A",
@@ -77,9 +77,10 @@ export const projects: Project[] = [
   },
   {
     title: "Virtual Boxing Simulator",
-    techStack: "Unreal Engine, Blueprints, Meta Quest",
+    techStack: ["Unreal Engine", "Blueprints", "Meta Quest"],
     imageSrc: "/vbs-logo.svg",
     imageAlt: "The Virtual Boxing Simulator logo",
+    isLogoImage: true,
     href: "https://www.youtube.com/watch?v=3zIW1LwYYDQ",
     description: (
       <p>
