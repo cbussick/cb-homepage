@@ -43,4 +43,19 @@ it.describe("mobile drawer", () => {
     await dialog.getByRole("link", { name: "Projects" }).click();
     await expect(dialog).toBeHidden();
   });
+
+  it("should close on close-button click", async ({ page }) => {
+    await page.goto("/");
+
+    const trigger = page.getByRole("button", {
+      name: "Toggle navigation menu",
+    });
+    const dialog = page.locator("dialog");
+
+    await trigger.click();
+    await expect(dialog).toBeVisible();
+
+    await dialog.getByRole("button", { name: "Close navigation menu" }).click();
+    await expect(dialog).toBeHidden();
+  });
 });

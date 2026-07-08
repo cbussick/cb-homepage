@@ -1,4 +1,4 @@
-import { PanelLeftIcon } from "lucide-react";
+import { PanelLeftIcon, XIcon } from "lucide-react";
 import { useEffect, useRef, type MouseEvent } from "react";
 import { GitHubIcon } from "@/components/shared/GitHubIcon";
 import { TextGradient } from "@/components/shared/TextGradient";
@@ -49,9 +49,19 @@ export function MobileDrawer({ items }: MobileDrawerProps) {
         className={styles.dialog}
         onClick={closeIfBackdropClick}
       >
-        <TextGradient className={styles.title}>
-          Christopher Bussick
-        </TextGradient>
+        <div className={styles.header}>
+          <TextGradient className={styles.title}>
+            Christopher Bussick
+          </TextGradient>
+          <button
+            type="button"
+            className={styles.closeButton}
+            aria-label="Close navigation menu"
+            onClick={closeDrawer}
+          >
+            <XIcon />
+          </button>
+        </div>
         <ul className={styles.navList}>
           {items.map((item) => (
             <li key={item.title}>
