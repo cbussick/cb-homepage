@@ -56,7 +56,7 @@ export const projects: Project[] = [
   },
   {
     title: "VR Office Exercises",
-    techStack: ["Unreal Engine", "Blueprints", "Meta Quest 2"],
+    techStack: ["Unreal Engine", "Meta Quest 2"],
     imageSrc: "/vr-office-exercises-farm.webp",
     imageAlt: "A screenshot of VR Office Exercises",
     href: "https://www.youtube.com/watch?v=L4YNOIWra-A",
@@ -77,7 +77,7 @@ export const projects: Project[] = [
   },
   {
     title: "Virtual Boxing Simulator",
-    techStack: ["Unreal Engine", "Blueprints", "Meta Quest"],
+    techStack: ["Unreal Engine", "Meta Quest"],
     imageSrc: "/vbs-logo.svg",
     imageAlt: "The Virtual Boxing Simulator logo",
     isLogoImage: true,
