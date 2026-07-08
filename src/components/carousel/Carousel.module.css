@@ -5,6 +5,7 @@
   margin: 0 auto;
 }
 
+/* keep in sync with BREAKPOINT_MD, src/styles/breakpoints.ts */
 @media (max-width: 768px) {
   .carousel {
     padding-bottom: 3rem;
@@ -59,6 +60,7 @@
   right: -3rem;
 }
 
+/* keep in sync with BREAKPOINT_MD, src/styles/breakpoints.ts */
 @media (max-width: 768px) {
   .prevButton,
   .nextButton {

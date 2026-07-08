@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
-
-const mobileBreakpoint = 768;
+import { BREAKPOINT_MD } from "@/styles/breakpoints";
 
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState<boolean>(
-    () => window.innerWidth < mobileBreakpoint,
+    () => window.innerWidth < BREAKPOINT_MD,
   );
 
   useEffect(() => {
-    const mql = window.matchMedia(`(max-width: ${mobileBreakpoint - 1}px)`);
+    const mql = window.matchMedia(`(max-width: ${BREAKPOINT_MD - 1}px)`);
     const onChange = () => {
-      setIsMobile(window.innerWidth < mobileBreakpoint);
+      setIsMobile(window.innerWidth < BREAKPOINT_MD);
     };
     mql.addEventListener("change", onChange);
     return () => mql.removeEventListener("change", onChange);

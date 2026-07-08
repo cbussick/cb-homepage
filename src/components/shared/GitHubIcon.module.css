@@ -1,6 +1,6 @@
 .icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: var(--icon-lg);
+  height: var(--icon-lg);
 }
 
 .path {
