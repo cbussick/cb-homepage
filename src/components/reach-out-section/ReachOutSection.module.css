@@ -6,7 +6,6 @@
   padding: 6rem 1.5rem;
   min-height: 100vh;
   min-height: 100svh;
-  scroll-snap-align: start;
   background-color: var(--background);
   text-align: center;
 }
