@@ -1,10 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
-import "@fontsource/quicksand/400.css";
-import "@fontsource/quicksand/500.css";
-import "@fontsource/quicksand/600.css";
-import "@fontsource/quicksand/700.css";
+import "@fontsource-variable/fraunces/full.css";
+import "@fontsource-variable/fraunces/full-italic.css";
+import "@fontsource/karla/400.css";
+import "@fontsource/karla/500.css";
+import "@fontsource/karla/600.css";
 import "./styles/theme.css";
 
 createRoot(document.getElementById("root")!).render(

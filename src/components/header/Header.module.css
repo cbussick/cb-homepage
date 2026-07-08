@@ -1,13 +1,31 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--background);
+  border-bottom: 1px solid var(--border);
+}
+
+.headerInner {
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: space-between;
+  max-width: 64rem;
+  width: 100%;
+  margin-inline: auto;
 }
 
 .navList {
   display: flex;
   gap: 2.5rem;
   align-items: center;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
 }
 
 .desktopOnly {
@@ -27,17 +45,6 @@
   gap: 0.5rem;
   text-decoration: none;
   color: var(--foreground);
-}
-
-.icon {
-  width: var(--icon-lg);
-  height: var(--icon-lg);
-  color: var(--foreground);
-  transition: color 0.3s;
-}
-
-.navLink:hover .icon {
-  color: var(--primary);
 }
 
 .label {
@@ -68,9 +75,4 @@
 
 .githubIcon {
   color: var(--foreground);
-  transition: color 0.3s;
-}
-
-.githubIcon:hover {
-  color: var(--primary);
 }

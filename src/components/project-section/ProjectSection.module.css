@@ -1,7 +1,32 @@
 .section {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
+  justify-content: center;
   width: 100%;
+  padding: 6rem 1.5rem;
+  min-height: 100vh;
+  min-height: 100svh;
+  scroll-snap-align: start;
+  background-color: var(--card);
+}
+
+.sectionInner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  max-width: 64rem;
+  width: 100%;
+}
+
+.cards {
+  columns: 2;
+  column-gap: 1.5rem;
+  width: 100%;
+}
+
+/* keep in sync with BREAKPOINT_MD, src/styles/breakpoints.ts */
+@media (max-width: 768px) {
+  .cards {
+    columns: 1;
+  }
 }

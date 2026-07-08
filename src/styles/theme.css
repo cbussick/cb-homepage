@@ -1,23 +1,21 @@
 :root {
-  --font-quicksand: "Quicksand", sans-serif;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.56 0 0);
+  --font-display: "Fraunces Variable", Georgia, "Times New Roman", serif;
+  --font-body:
+    "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --background: oklch(0.985 0.004 78);
+  --foreground: oklch(0.3 0.006 265);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.56 0 0);
+  --card-foreground: var(--foreground);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.56 0 0);
-  --primary: oklch(0.84 0.172159 84.9338);
-  --primary-foreground: oklch(0.98 0.016 73.684);
-  --secondary: oklch(0.74 0.1839 53.5);
-  --muted: oklch(0.74 0.1839 53.5);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --border: oklch(0.92 0.004 286.32);
+  --popover-foreground: var(--foreground);
+  --primary: oklch(0.42 0.13 265);
+  --primary-foreground: oklch(0.98 0.006 265);
+  --secondary: oklch(0.6 0.1 265);
+  --muted: oklch(0.96 0.006 78);
+  --muted-foreground: oklch(0.55 0.01 265);
+  --border: oklch(0.91 0.007 78);
 
-  --gradient-primary: linear-gradient(
-    to right,
-    var(--primary),
-    var(--secondary)
-  );
+  --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
   --overlay-scrim: oklch(0% 0 0 / 0.5);
 
   --space-1: 0.25rem;
@@ -38,8 +36,8 @@
   --radius-xl: 0.75rem;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 1px 2px 0 oklch(0% 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px oklch(0% 0 0 / 0.1);
+  --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.06);
+  --shadow-md: 0 6px 20px oklch(0% 0 0 / 0.08);
 
   --icon-sm: 1rem;
   --icon-lg: 1.5rem;
@@ -66,9 +64,19 @@
 
 * {
   border-color: var(--border);
-  font-family: var(--font-quicksand);
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -77,6 +85,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--background);
   color: var(--foreground);
+  font-family: var(--font-body);
 }
 
 @layer reset {
@@ -138,6 +147,15 @@ a:hover {
   color: var(--primary);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
 h1 {
   scroll-margin-top: var(--space-20);
   padding-bottom: var(--space-2);
@@ -166,7 +184,6 @@ h2 {
 
 h3 {
   scroll-margin-top: var(--space-20);
-  padding-bottom: var(--space-2);
   font-size: var(--text-2xl);
   line-height: var(--leading-2xl);
   font-weight: 600;
@@ -175,7 +192,6 @@ h3 {
 
 h4 {
   scroll-margin-top: var(--space-20);
-  padding-bottom: var(--space-2);
   font-size: var(--text-xl);
   line-height: var(--leading-xl);
   font-weight: 600;
@@ -184,7 +200,6 @@ h4 {
 
 h5 {
   scroll-margin-top: var(--space-20);
-  padding-bottom: var(--space-2);
   font-size: var(--text-lg);
   line-height: var(--leading-lg);
   font-weight: 600;
@@ -193,7 +208,6 @@ h5 {
 
 h6 {
   scroll-margin-top: var(--space-20);
-  padding-bottom: var(--space-2);
   font-weight: 600;
   letter-spacing: -0.025em;
 }

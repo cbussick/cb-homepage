@@ -6,13 +6,13 @@ import styles from "./App.module.css";
 
 export function App() {
   return (
-    <main className={styles.main}>
-      <div className={styles.content}>
-        <Header />
+    <>
+      <Header />
+      <main className={styles.main}>
         <HeroSection />
         <ProjectSection />
         <ReachOutSection />
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
