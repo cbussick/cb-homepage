@@ -13,7 +13,11 @@
   --muted-foreground: oklch(0.552 0.016 285.938);
   --border: oklch(0.92 0.004 286.32);
 
-  --gradient-primary: linear-gradient(to right, var(--primary), var(--secondary));
+  --gradient-primary: linear-gradient(
+    to right,
+    var(--primary),
+    var(--secondary)
+  );
   --overlay-scrim: oklch(0% 0 0 / 0.5);
 
   --space-1: 0.25rem;

@@ -72,7 +72,8 @@
 }
 
 .ctaButton:hover {
-  opacity: 0.9;
+  opacity: 0.85;
+  color: var(--primary-foreground);
 }
 
 .githubIcon {
