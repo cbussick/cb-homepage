@@ -64,6 +64,7 @@
   border-color: var(--border);
   font-family: var(--font-quicksand);
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
