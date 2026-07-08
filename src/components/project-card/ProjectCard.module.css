@@ -10,6 +10,24 @@
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   break-inside: avoid;
+  opacity: 0;
+  transform: translateY(var(--reveal-distance));
+  transition:
+    opacity var(--reveal-duration) var(--reveal-easing),
+    transform var(--reveal-duration) var(--reveal-easing);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition-duration: var(--motion-reduced-duration);
+    transition-delay: 0ms;
+  }
 }
 
 .header {

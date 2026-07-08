@@ -4,7 +4,7 @@ import styles from "./HeroSection.module.css";
 export function HeroSection() {
   return (
     <div className={styles.section} id="hero">
-      <div className={styles.sectionInner}>
+      <div className={[styles.sectionInner, styles.revealed].join(" ")}>
         <div>
           <h1>
             <TextGradient>Hey</TextGradient> 👋🏻

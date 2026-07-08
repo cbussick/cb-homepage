@@ -10,6 +10,7 @@
 }
 
 .sectionInner {
+  composes: reveal from "../../styles/reveal.module.css";
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -17,6 +18,10 @@
   max-width: 64rem;
   width: 100%;
   text-align: center;
+}
+
+.revealed {
+  composes: revealed from "../../styles/reveal.module.css";
 }
 
 .sectionInner h1 {

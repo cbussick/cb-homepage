@@ -1,6 +1,7 @@
 import { GitHubIcon } from "@/components/shared/GitHubIcon";
 import { TextGradient } from "@/components/shared/TextGradient";
-import { ReactNode } from "react";
+import { useInView } from "@/hooks/useInView";
+import { CSSProperties, ReactNode } from "react";
 import styles from "./ProjectCard.module.css";
 
 export interface Project {
@@ -13,6 +14,13 @@ export interface Project {
   href: string;
   gitHubURL?: string;
 }
+
+interface ProjectCardProps extends Project {
+  index: number;
+}
+
+const revealStaggerStepMs = 80;
+const revealStaggerMaxSteps = 3;
 
 function formatTechStack(items: string[]): string {
   return items.join(" · ");
@@ -27,9 +35,19 @@ export function ProjectCard({
   description,
   href,
   gitHubURL,
-}: Project) {
+  index,
+}: ProjectCardProps) {
+  const [ref, isInView] = useInView<HTMLElement>();
+  const revealDelay = `${Math.min(index, revealStaggerMaxSteps) * revealStaggerStepMs}ms`;
+
   return (
-    <article className={styles.card}>
+    <article
+      ref={ref}
+      className={[styles.card, isInView && styles.revealed]
+        .filter(Boolean)
+        .join(" ")}
+      style={{ "--reveal-delay": revealDelay } as CSSProperties}
+    >
       <header className={styles.header}>
         <TextGradient as="h3" className={styles.title}>
           {title}

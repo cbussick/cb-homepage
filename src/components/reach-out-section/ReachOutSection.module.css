@@ -11,10 +11,15 @@
 }
 
 .sectionInner {
+  composes: reveal from "../../styles/reveal.module.css";
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
   max-width: 64rem;
   width: 100%;
+}
+
+.revealed {
+  composes: revealed from "../../styles/reveal.module.css";
 }

@@ -19,6 +19,7 @@ npm run dev       # start Vite dev server
 npm run build     # production build to dist/
 npm run preview   # preview the production build
 npm run lint      # eslint .
+npm run lint:css  # stylelint "src/**/*.css"
 npm run format    # prettier --write .
 npm run format:check  # prettier --check .
 npm test          # playwright test (builds + previews automatically)
