@@ -43,6 +43,7 @@
 }
 
 .photoFrame {
+  position: relative;
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);
@@ -52,7 +53,20 @@
   margin-inline: auto;
 }
 
+.photoFrame::before {
+  position: absolute;
+  inset: 0.5rem;
+  z-index: 0;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, var(--muted), var(--border)),
+    var(--muted);
+  content: "";
+}
+
 .photoFrame img {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: auto;

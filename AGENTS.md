@@ -8,7 +8,7 @@ Personal single-page portfolio site. Vite + React + TypeScript, hand-written CSS
 - **UI**: React + TypeScript, JSX
 - **Icons**: `lucide-react`
 - **Styling**: one global `src/styles/theme.css` (oklch design tokens as CSS custom properties, base element styles) + one CSS Module per component. No Tailwind, no CSS-in-JS.
-- **Fonts**: Fraunces Variable (headings/display, `--font-display`) + Karla (body, `--font-body`), loaded via `@fontsource-variable/fraunces` + `@fontsource/karla` imports in `src/main.tsx` — not via `index.html` `<link>` tags.
+- **Fonts**: Fraunces Variable (headings/display, `--font-display`) + Karla (body, `--font-body`), self-hosted from `public/fonts/` with explicit `@font-face` rules in `src/styles/theme.css`. Critical fonts are preloaded in `index.html`.
 - **Projects layout**: a static 2-column masonry (CSS `columns`, 1-column on mobile) showing all projects at once, sized to each project's own content — no carousel/autoplay, no JS scroll logic.
 - **Testing**: Playwright (`tests/*.spec.ts`), run against a production build via `vite preview`, not the dev server.
 
@@ -30,7 +30,7 @@ npm test          # playwright test (builds + previews automatically)
 ```
 index.html                 # Vite entry point, holds <head> (title/meta)
 src/
-  main.tsx                  # React root, imports font CSS + theme.css
+  main.tsx                  # React root, imports theme.css
   App.tsx + App.module.css  # top-level layout composing the sections below
   styles/theme.css          # oklch design tokens + base element styles (global)
   components/
@@ -52,6 +52,7 @@ tests/                       # Playwright specs (smoke, nav, projects)
 - Path alias `@/*` maps to `./src/*` (configured in both `vite.config.ts` and `tsconfig.app.json`).
 - No `cn()`/clsx-style helper — conditional class joining is `[a, b].filter(Boolean).join(" ")` inline.
 - Interactive widgets favor native platform primitives over libraries: the mobile drawer is a native `<dialog>`, the tooltip is CSS-only (`:hover`/`:focus-within`). Don't reach for a headless-UI library (Radix, Base UI, etc.) for these.
+- Font files in `public/fonts/` are deployed as-is by Vite and must keep license provenance current in `public/fonts/LICENSE.md`. If adding, replacing, or removing font files, update that notice with the relevant copyright statements and full license text, and confirm the font license allows self-hosted redistribution.
 - Named exports only, exported inline at declaration (`export function Foo() {}`), matching the global TypeScript convention.
 - Full-bleed sections: `Header`, `HeroSection`, `ProjectSection`, and `ReachOutSection` each render an outer `.section` (full viewport width, own `background-color`, `min-height: 100svh`, `scroll-snap-align: start`) wrapping an inner `.sectionInner`/`.headerInner` (`max-width: 64rem`, centered) — not one shared centered wrapper in `App.tsx`. Section backgrounds alternate between `--background` and `--card` for visual rhythm. `scroll-snap-type` lives on `html` in `theme.css`, since the document itself is the scroll container.
 

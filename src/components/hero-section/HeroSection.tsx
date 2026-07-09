@@ -20,6 +20,9 @@ export function HeroSection() {
               alt="Me and Bruno"
               width={400}
               height={400}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
           <figcaption>{`Me and Bruno :)`}</figcaption>

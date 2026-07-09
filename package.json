@@ -14,8 +14,6 @@
     "test": "playwright test"
   },
   "dependencies": {
-    "@fontsource-variable/fraunces": "^5.2.9",
-    "@fontsource/karla": "^5.2.8",
     "lucide-react": "^0.488.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1"
