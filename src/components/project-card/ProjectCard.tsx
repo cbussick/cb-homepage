@@ -13,6 +13,7 @@ export interface Project {
   description: ReactNode;
   href: string;
   gitHubURL?: string;
+  ctaText?: string;
 }
 
 interface ProjectCardProps extends Project {
@@ -35,6 +36,7 @@ export function ProjectCard({
   description,
   href,
   gitHubURL,
+  ctaText = "Take me to the project",
   index,
 }: ProjectCardProps) {
   const [ref, isInView] = useInView<HTMLElement>();
@@ -72,7 +74,7 @@ export function ProjectCard({
           rel="noopener"
           className={styles.ctaButton}
         >
-          Take me to the project
+          {ctaText}
         </a>
         {gitHubURL && (
           <a

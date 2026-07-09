@@ -95,4 +95,20 @@ export const projects: Project[] = [
       </p>
     ),
   },
+  {
+    title: "cbussick.dev",
+    techStack: ["TypeScript", "React", "CSS Modules", "Vite"],
+    imageSrc: "/personal-website.webp",
+    imageAlt: "A screenshot of my personal website",
+    href: "https://cbussick.dev",
+    gitHubURL: "https://github.com/cbussick/cb-homepage",
+    ctaText: "Infinite loop 👀",
+    description: (
+      <p>
+        The website you are currently on! My place on the Internet. I
+        occasionally use this website to play around with new technologies or
+        designs.
+      </p>
+    ),
+  },
 ];
