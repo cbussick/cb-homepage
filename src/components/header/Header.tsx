@@ -38,6 +38,7 @@ export function Header() {
                   href="https://github.com/cbussick"
                   target="_blank"
                   rel="noopener"
+                  aria-label="Me on GitHub"
                 >
                   <GitHubIcon className={styles.githubIcon} />
                 </a>

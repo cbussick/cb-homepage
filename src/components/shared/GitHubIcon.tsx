@@ -7,7 +7,8 @@ interface GitHubIconProps {
 export function GitHubIcon({ className }: GitHubIconProps) {
   return (
     <svg
-      role="img"
+      aria-hidden="true"
+      focusable="false"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       className={[styles.icon, className].filter(Boolean).join(" ")}

@@ -23,4 +23,7 @@ it("should show all projects in a grid with no carousel controls", async ({
   await expect(
     page.getByRole("link", { name: "Take me to the project" }).first(),
   ).toHaveAttribute("href", "https://dinas-lab.vercel.app/");
+  await expect(
+    page.getByRole("link", { name: "View DiNAs Lab GitHub repository" }),
+  ).toHaveAttribute("href", "https://github.com/cbussick/cb-masterthesis");
 });

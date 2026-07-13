@@ -14,9 +14,10 @@ it.describe("desktop navigation", () => {
       "href",
       "#reach-out",
     );
-    await expect(
-      page.locator('nav a[href="https://github.com/cbussick"]'),
-    ).toHaveAttribute("target", "_blank");
+    await expect(page.getByRole("link", { name: "Me on GitHub" })).toHaveAttribute(
+      "target",
+      "_blank",
+    );
   });
 });
 
