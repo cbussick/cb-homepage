@@ -15,7 +15,7 @@ it.describe("desktop navigation", () => {
       "#reach-out",
     );
     await expect(
-      page.locator('nav a[href="https://github.com/cbussick"]'),
+      page.getByRole("link", { name: "Me on GitHub" }),
     ).toHaveAttribute("target", "_blank");
   });
 });
@@ -31,7 +31,7 @@ it.describe("mobile drawer", () => {
     const trigger = page.getByRole("button", {
       name: "Toggle navigation menu",
     });
-    const dialog = page.locator("dialog");
+    const dialog = page.getByRole("dialog", { name: "Christopher Bussick" });
 
     await trigger.click();
     await expect(dialog).toBeVisible();
@@ -50,7 +50,7 @@ it.describe("mobile drawer", () => {
     const trigger = page.getByRole("button", {
       name: "Toggle navigation menu",
     });
-    const dialog = page.locator("dialog");
+    const dialog = page.getByRole("dialog", { name: "Christopher Bussick" });
 
     await trigger.click();
     await expect(dialog).toBeVisible();

@@ -47,6 +47,7 @@ export function MobileDrawer({ items }: MobileDrawerProps) {
       <dialog
         ref={dialogRef}
         className={styles.dialog}
+        aria-label="Christopher Bussick"
         onClick={closeIfBackdropClick}
       >
         <div className={styles.header}>

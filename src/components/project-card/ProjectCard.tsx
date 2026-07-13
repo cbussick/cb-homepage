@@ -82,6 +82,7 @@ export function ProjectCard({
             target="_blank"
             rel="noopener"
             className={styles.githubIconAnchor}
+            aria-label={`View ${title} GitHub repository`}
           >
             <GitHubIcon className={styles.githubIcon} />
           </a>

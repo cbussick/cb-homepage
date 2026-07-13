@@ -25,6 +25,10 @@ npm run format:check  # prettier --check .
 npm test          # playwright test (builds + previews automatically)
 ```
 
+## Development workflow
+
+Follow [`docs/development-workflow.md`](docs/development-workflow.md) for the branch, pull request, CI, and Vercel deployment process. Do not commit or push directly to `main`.
+
 ## Project structure
 
 ```
@@ -54,7 +58,7 @@ tests/                       # Playwright specs (smoke, nav, projects)
 - Interactive widgets favor native platform primitives over libraries: the mobile drawer is a native `<dialog>`, the tooltip is CSS-only (`:hover`/`:focus-within`). Don't reach for a headless-UI library (Radix, Base UI, etc.) for these.
 - Font files in `public/fonts/` are deployed as-is by Vite and must keep license provenance current in `public/fonts/LICENSE.md`. If adding, replacing, or removing font files, update that notice with the relevant copyright statements and full license text, and confirm the font license allows self-hosted redistribution.
 - Named exports only, exported inline at declaration (`export function Foo() {}`), matching the global TypeScript convention.
-- Full-bleed sections: `Header`, `HeroSection`, `ProjectSection`, and `ReachOutSection` each render an outer `.section` (full viewport width, own `background-color`, `min-height: 100svh`, `scroll-snap-align: start`) wrapping an inner `.sectionInner`/`.headerInner` (`max-width: 64rem`, centered) — not one shared centered wrapper in `App.tsx`. Section backgrounds alternate between `--background` and `--card` for visual rhythm. `scroll-snap-type` lives on `html` in `theme.css`, since the document itself is the scroll container.
+- Full-bleed sections: `Header`, `HeroSection`, `ProjectSection`, and `ReachOutSection` each render an outer `.section` (full viewport width, own `background-color`, `min-height: 100svh`) wrapping an inner `.sectionInner`/`.headerInner` (`max-width: 64rem`, centered) — not one shared centered wrapper in `App.tsx`. Section backgrounds alternate between `--background` and `--card` for visual rhythm.
 
 ## Testing notes
 
