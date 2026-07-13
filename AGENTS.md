@@ -25,6 +25,10 @@ npm run format:check  # prettier --check .
 npm test          # playwright test (builds + previews automatically)
 ```
 
+## Development workflow
+
+Follow [`docs/development-workflow.md`](docs/development-workflow.md) for the branch, pull request, CI, and Vercel deployment process. Do not commit or push directly to `main`.
+
 ## Project structure
 
 ```
