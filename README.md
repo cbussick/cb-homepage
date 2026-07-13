@@ -6,6 +6,8 @@ This iteration of my website was built with Vite + React + TypeScript + CSS Modu
 
 ## Getting Started
 
+Requires Node.js `^20.19.0 || >=22.12.0` and npm 11.13.0.
+
 ```bash
 npm run dev
 ```
