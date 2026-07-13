@@ -14,10 +14,9 @@ it.describe("desktop navigation", () => {
       "href",
       "#reach-out",
     );
-    await expect(page.getByRole("link", { name: "Me on GitHub" })).toHaveAttribute(
-      "target",
-      "_blank",
-    );
+    await expect(
+      page.getByRole("link", { name: "Me on GitHub" }),
+    ).toHaveAttribute("target", "_blank");
   });
 });
 
