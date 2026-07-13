@@ -1,5 +1,5 @@
 import { expect, test as it } from "@playwright/test";
-import { projects } from "@/data/projects";
+import { projects } from "../src/data/projects";
 
 it("should show all projects in a grid with no carousel controls", async ({
   page,
