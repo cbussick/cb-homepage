@@ -32,7 +32,7 @@ it.describe("mobile drawer", () => {
     const trigger = page.getByRole("button", {
       name: "Toggle navigation menu",
     });
-    const dialog = page.locator("dialog");
+    const dialog = page.getByRole("dialog", { name: "Christopher Bussick" });
 
     await trigger.click();
     await expect(dialog).toBeVisible();
@@ -51,7 +51,7 @@ it.describe("mobile drawer", () => {
     const trigger = page.getByRole("button", {
       name: "Toggle navigation menu",
     });
-    const dialog = page.locator("dialog");
+    const dialog = page.getByRole("dialog", { name: "Christopher Bussick" });
 
     await trigger.click();
     await expect(dialog).toBeVisible();
